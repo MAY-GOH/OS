@@ -1,8 +1,8 @@
 
 # Practical 2 – Managing Files in Linux System
 
-**Course:** AMCS2093 Operating Systems  
-**Username Example:** `tarumt`
+**Course:**  Operating Systems  
+**Username Example:** `user`
 
 ---
 
@@ -71,7 +71,7 @@ find ~ -name ultra.txt
 
 10. Rename `ultra.txt` to `mega.txt`:
 ```bash
-cd /home/tarumt/D2/super
+cd /home/user/D2/super
 mv ultra.txt mega.txt
 ```
 
@@ -156,78 +156,7 @@ mkdir backup
 
 26. Backup text files:
 ```bash
-cp /home/tarumt/D2/*.txt backup
+cp /home/user/D2/*.txt backup
 ```
 
 ---
-
-## ✅ Section B – True / False Statements
-
-| Statement | True/False | Notes |
-|----------|------------|-------|
-| The structure of Linux filesystem is tree-based starting from `/` | ✅ True | |
-| Relative path starts from current dir; absolute from root `/` | ✅ True | |
-| Terminal starts in root `/` directory | ❌ False | It usually starts in the user's home directory (`~`) |
-| `/etc` is like Control Panel in Windows | ❌ False | `/etc` stores config files, not UI settings |
-| Windows uses `/`, Linux uses `\` | ❌ False | It's the other way around (Windows: `\`, Linux: `/`) |
-| Linux is case-insensitive | ❌ False | Linux **is case-sensitive** |
-| Windows has volume-based hierarchy, Linux has unified | ✅ True | |
-| `.tar` is a text file extension | ❌ False | `.tar` is an archive, not a text file |
-| Linux uses color for file types (e.g., Blue, Green) | ✅ True | |
-| Lossless compression keeps all data | ✅ True | |
-
----
-
-## ➕ Extra Exercises
-
-1. Directory Navigation:
-- **Absolute Path:** `/root/MyFiles/ProjectFolder/202305_Repository`
-- **Relative Path:** `../../ProjectFolder/202305_Repository`
-- List only `MyReport` and `MySaving`:
-  ```bash
-  ls *MyReport *MySaving
-  ```
-- List directories ending with `Repository` under `/MyReport`:
-  ```bash
-  ls /MyReport/*Repository/
-  ```
-
-2. Combine `/etc/passwd` and `/etc/group`:
-```bash
-cat /etc/passwd /etc/group > users_groups.txt
-```
-
-3. Create symbolic link:
-```bash
-ln -s doc1 ~/softlink
-```
-
-4. View `/var/log/messages` page-by-page:
-```bash
-less /var/log/messages
-```
-
-5. Sort file content in reverse order:
-```bash
-sort -r CourseListing
-```
-
-6. Move and rename `/tmp/file2`:
-```bash
-mv /tmp/file2 ~/my_file2
-```
-
-7. Compress files:
-```bash
-tar -czf MyArchive.tar.gz file1 file2
-```
-
-8. Find files with "AMCS2093" in name:
-```bash
-find /home -name "*AMCS2093*"
-```
-
-9. List directories under `/var`:
-```bash
-ls -d /var/*/
-```
